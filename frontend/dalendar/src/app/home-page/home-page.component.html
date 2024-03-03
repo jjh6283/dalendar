@@ -1,10 +1,13 @@
 <style>
+    .custom-card-header-color {
+        background-color: #fadadd;
+    }
 </style>
 <div class="container">
     <div class="columns">
         <div class="column is-one-third">
             <div class="card">
-                <header class="card-header">
+                <header class="card-header custom-card-header-color">
                     <p class="card-header-title">
                         You are:
                     </p>
@@ -13,25 +16,41 @@
                     </div>
                 </header>
                 <div class="card-content">
-                    {{getPrediction()}}
+                    {{getPrediction() | async}}
                 </div>
             </div>
         </div>
         <div class="column is-one-third">
             <div class="card">
-                <header class="card-header">
+                <header class="card-header custom-card-header-color">
                     <p class="card-header-title">
                         TODO
                     </p>
                 </header>
                 <div class="card-content">
+                    <label class="checkbox">
+                        <input type="checkbox">
+                        Get groceries
+                    </label>
                     
+                </div>
+                <div class="card-content">
+                    <label class="checkbox">
+                        <input type="checkbox">
+                        Do Homework
+                    </label>
+                </div>
+                <div class="card-content">
+                    <label class="checkbox">
+                        <input type="checkbox">
+                        Gym
+                    </label>
                 </div>
             </div>
         </div>
         <div class="column is-one-third">
             <div class="card">
-                <header class="card-header">
+                <header class="card-header custom-card-header-color">
                     <p class="card-header-title">
                         Your Cycle
                     </p>
@@ -58,7 +77,7 @@
     <div class="columns">
         <div class="column is-three-quarters">
             <div class="card">
-                <header class="card-header">
+                <header class="card-header custom-card-header-color">
                     <p class="card-header-title">
                         Your week
                     </p>
@@ -70,13 +89,14 @@
         </div>
         <div class="column is-one-fourth">
             <div class="card">
-                <header class="card-header">
+                <header class="card-header custom-card-header-color">
                     <p class="card-header-title">
                         QOTD
                     </p>
                 </header>
                 <div class="card-content">
-                    
+                    "You may not control all the events that happen to you,
+                    but you can decide not to be reduced by them." - Maya Angelou
                 </div>
             </div>
         </div>
