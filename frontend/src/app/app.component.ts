@@ -7,11 +7,11 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'dalendar';
-  hideHome: boolean = true;
+  hideHome: boolean = false;
   hideGoals: boolean = true;
   hideWelcome: boolean = true;
   hideGeneral: boolean = true;
   hideFitness: boolean = true;
   hideNutr: boolean = true;
-  hideProd: boolean = false;
+  hideProd: boolean = true;
 }
