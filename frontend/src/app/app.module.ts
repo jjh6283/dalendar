@@ -13,6 +13,7 @@ import { FitnessPageModule } from './fitness-page/fitness-page.module';
 import { GeneralPageModule } from './general-page/general-page.module';
 import { ProdPageModule } from './prod-page/prod-page.module';
 import { HttpClientModule } from '@angular/common/http';
+import { WeekViewModule } from './week-view/week-view.module';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { HttpClientModule } from '@angular/common/http';
     FitnessPageModule,
     GeneralPageModule,
     ProdPageModule,
-    HttpClientModule
+    HttpClientModule,
+    WeekViewModule
   ],
   providers: [],
   bootstrap: [AppComponent]
