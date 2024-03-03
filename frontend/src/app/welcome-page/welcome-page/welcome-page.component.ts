@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 
 @Component({
   selector: 'app-welcome-page',
@@ -6,5 +6,14 @@ import { Component } from '@angular/core';
   styleUrls: ['./welcome-page.component.css']
 })
 export class WelcomePageComponent {
+  @Output() valueEmitter = new EventEmitter<string>()
+  nav: string = 'fitness';
 
+  setGoal(nav: string) {
+    this.nav = nav;
+  }
+
+  emitComplete() {
+    this.valueEmitter.emit(this.nav);
+  }
 }

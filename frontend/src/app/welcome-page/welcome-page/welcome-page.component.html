@@ -1,37 +1,37 @@
 <style>
     .submitButton{
-        position: absolute;
-        bottom: 25px;
-        right: 25px;
+        bottom: 0px;
+        margin-top: 15px;
     }
 </style>
-<h1 class="title">Dalendar</h1>
-<h2 class="title">Welcome!</h2>
+
 
 <div class="container">
   <div class="box">
+    <h2 class="title">Welcome to Dalendar!</h2>
+
     What are your goals?
     <div class="field is-grouped">
         <p class="control">
-          <button class="button is-large">
+          <button class="button is-large" (click)="setGoal('fitness')">
             Fitness
           </button>
         </p>
         <p class="control">
-          <button class="button is-large">
+          <button class="button is-large" (click)="setGoal('nutrition')">
             Nutrition
           </button>
         </p>
         <p class="control">
-          <button class="button is-large">
+          <button class="button is-large" (click)="setGoal('productivity')">
             Productivity
           </button>
         </p>
     </div>
         <input class="input" type="text" placeholder="Other">
-        
+        <button class="submitButton button is-primary" (click)="emitComplete()">
+          Next
+        </button>
   </div>
+  
 </div>
-<button class="submitButton button is-primary">
-  Next
-</button>

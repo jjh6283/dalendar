@@ -5,8 +5,9 @@
         right: 25px;
     }
 </style>
-<h1 class="title">General Info</h1>
 <div class="container">
+    <h1 class="title">General Info</h1>
+
     <div class="box">
         <p>
             <b>Date of Birth:</b>
@@ -140,6 +141,6 @@
     </div>
     
 </div>
-<button class="submitButton button is-primary">
+<button class="submitButton button is-primary" (click)="emitNavigation()">
     Next
 </button>

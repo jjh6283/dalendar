@@ -7,6 +7,7 @@ import { Component } from '@angular/core';
 })
 export class GoalsPageComponent {
   currentTab: string = "general"
+  
   switchTab(newTab : string) {
     this.currentTab = newTab
   }

@@ -1,10 +1,13 @@
-<app-navbar></app-navbar>
-<app-calendar-page></app-calendar-page>
+<app-navbar (valueEmitter)="navigateTo($event)"></app-navbar>
+<app-welcome-page [hidden]="hideWelcome" (valueEmitter)="navigateTo($event)"></app-welcome-page>
+<app-general-page [hidden]="hideGeneral" (valueEmitter)="navigateTo($event)"></app-general-page>
+<app-fitness-page [hidden]="hideFitness" (valueEmitter)="navigateTo($event)"></app-fitness-page>
+
 <app-home-page [hidden]="hideHome"></app-home-page>
 <app-goals-page [hidden]="hideGoals"></app-goals-page>
-<app-welcome-page [hidden]="hideWelcome"></app-welcome-page>
-<app-general-page [hidden]="hideGeneral"></app-general-page>
-<app-fitness-page [hidden]="hideFitness"></app-fitness-page>
-<app-nutr-page [hidden]="hideNutr"></app-nutr-page>
-<app-prod-page [hidden]="hideProd"></app-prod-page>
+<app-nutr-page [hidden]="hideNutr" (valueEmitter)="navigateTo($event)"></app-nutr-page>
+<app-prod-page [hidden]="hideProd" (valueEmitter)="navigateTo($event)"></app-prod-page>
+<app-calendar-page [hidden]="hideCalendar"></app-calendar-page>
+
+
 <router-outlet></router-outlet>

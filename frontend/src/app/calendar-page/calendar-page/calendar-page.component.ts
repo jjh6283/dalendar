@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 import { MONTHS } from './TimeDefinitions';
 
 @Component({
@@ -7,6 +7,7 @@ import { MONTHS } from './TimeDefinitions';
   styleUrls: ['./calendar-page.component.css']
 })
 export class CalendarPageComponent {
+
   // Year month information
   months = MONTHS;
 
@@ -56,5 +57,24 @@ export class CalendarPageComponent {
   
     return dayOfMonth;
   }
+
+  setNextMonth() {
+    this.selMonth += 1
+
+    if (this.selMonth + 1 > 11) {
+      this.selYear += 1;
+      this.selMonth = 0;
+    }
+  }
+
+  setPreviousMonth() {
+    this.selMonth -= 1
+
+    if (this.selMonth - 1 < 0) {
+      this.selYear -= 1;
+      this.selMonth = 11;
+    }
+  }
+
 }
 

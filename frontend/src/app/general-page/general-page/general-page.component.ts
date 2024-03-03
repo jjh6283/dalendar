@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 
 @Component({
   selector: 'app-general-page',
@@ -6,5 +6,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./general-page.component.css']
 })
 export class GeneralPageComponent {
+  @Output() valueEmitter = new EventEmitter<string>();
 
+  emitNavigation() {
+    this.valueEmitter.emit('home')
+  }
 }
