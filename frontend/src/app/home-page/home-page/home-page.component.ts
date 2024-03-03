@@ -7,7 +7,7 @@ import { RecommendationService } from '../../services/recommendation.service';
   styleUrls: ['./home-page.component.css']
 })
 export class HomePageComponent {
-  currentPhase: string = "Menstruating";
+  currentPhase: string = "Follicular Phase";
   data: string = ''
 
   constructor(private recommendations: RecommendationService) {
