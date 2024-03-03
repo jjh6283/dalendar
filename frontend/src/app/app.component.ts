@@ -7,7 +7,7 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'dalendar';
-  hideHome: boolean = false;
+  hideHome: boolean = true;
   hideGoals: boolean = true;
-  hideForm: boolean = false;
+  hideWelcome: boolean = false;
 }
