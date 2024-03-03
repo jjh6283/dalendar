@@ -17,4 +17,5 @@ export class AppComponent {
   title = 'dalendar';
   hideHome: boolean = false;
   hideGoals: boolean = true;
+  hideForm: boolean = false;
 }
