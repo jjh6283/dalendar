@@ -25,6 +25,12 @@ export class CalendarPageComponent {
   isLeapYear: boolean;
   selDaysInMonth: number;
 
+  start: number = -2;
+  end: number = 1;
+
+  start1: number = 24;
+  end1: number = 29;
+
   // By default, viewing today
   constructor() {
     this.selDay = this.curDay;
@@ -76,5 +82,10 @@ export class CalendarPageComponent {
     }
   }
 
+  checkPeriod(day: number) {
+    
+    // if the start is 
+    return !(this.start1 < day && this.end1 > day) && !(this.start < day && this.end > day) 
+  } 
 }
 

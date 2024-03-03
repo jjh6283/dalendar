@@ -46,7 +46,17 @@
 					<tr *ngFor="let day of [].constructor(getWeeksInMonth() + 1); let j = index">
 						<td *ngFor="let day of [].constructor(7); let i = index">
 							<div class="box cell">
-								<p>{{ ((determineDate(i, j) + 2 > 0) && (determineDate(i, j) + 2 < selDaysInMonth)) ? determineDate(i, j) + 2 : ''}}</p>
+								<div style="display: grid">
+									<p>{{ ((determineDate(i, j) + 2 > 0) && (determineDate(i, j) + 2 < selDaysInMonth)) ? determineDate(i, j) + 2 : ''}}</p>
+				
+									<span [hidden]="checkPeriod(determineDate(i, j))">
+										<svg height="25" width="25" xmlns="http://www.w3.org/2000/svg">
+											<circle r="8" cx="8" cy="8" fill="red" />
+										</svg> 
+									</span>
+									
+								</div>
+								
 							</div>
 						</td>
 					</tr>
