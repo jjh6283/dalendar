@@ -8,5 +8,9 @@ import { Component } from '@angular/core';
   styleUrl: './goals-page.component.css'
 })
 export class GoalsPageComponent {
+  currentTab: string = "general"
+  switchTab(newTab : string) {
+    this.currentTab = newTab
+  }
 
 }
