@@ -1,4 +1,7 @@
 import { Component } from '@angular/core';
+import { RecommendationService } from '../../src/app/services/recommendation.service';
+import { ReccomendationResponse } from './home-page/home-page/home-page.component';
+
 
 @Component({
   selector: 'app-root',
@@ -6,6 +9,12 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+  rec: string = 'pending...';
+  phase: string = "Follicular Phase";
+  goal: string = 'something';
+
+  constructor (private recService: RecommendationService) {}
+
   title = 'dalendar';
   hideWelcome: boolean = false;
   hideGeneral: boolean = true;
@@ -99,5 +108,14 @@ export class AppComponent {
         this.hideCalendar = true
         break;
     }
+  }
+
+  askGoal(goal: string) {
+    console.log(`this is in the askGoal ${goal}`)
+    this.goal = goal;
+    // this.recService.recommendation().subscribe((data: ReccomendationResponse) => {
+    //   console.log(data)
+    //   this.rec = data.choices[0]?.message.content;
+    // })
   }
 }

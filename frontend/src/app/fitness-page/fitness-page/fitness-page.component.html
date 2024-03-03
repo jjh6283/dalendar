@@ -14,19 +14,19 @@
         </p>
         <div class="control">
             <label class="radio">
-              <input type="radio" name="answer">
+              <input type="radio" name="answer" (click)="setSelection('gain muscle')">
               Gain Muscle
             </label>
             <label class="radio">
-              <input type="radio" name="answer">
+              <input type="radio" name="answer" (click)="setSelection('lose weight')">
               Lose Weight
             </label>
             <label class="radio">
-                <input type="radio" name="answer">
+                <input type="radio" name="answer" (click)="setSelection('maintain weight')">
                 Maintain Weight
             </label>
         </div>
-        <input class="input" type="text" placeholder="Other">
+        <input class="input" type="text" placeholder="Other"/>
     </div>
 
 </div>

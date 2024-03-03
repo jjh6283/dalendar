@@ -1,9 +1,9 @@
 <app-navbar (valueEmitter)="navigateTo($event)"></app-navbar>
 <app-welcome-page [hidden]="hideWelcome" (valueEmitter)="navigateTo($event)"></app-welcome-page>
 <app-general-page [hidden]="hideGeneral" (valueEmitter)="navigateTo($event)"></app-general-page>
-<app-fitness-page [hidden]="hideFitness" (valueEmitter)="navigateTo($event)"></app-fitness-page>
+<app-fitness-page [hidden]="hideFitness" (valueEmitter)="navigateTo($event)" (optionEmitter)="askGoal($event)" ></app-fitness-page>
 
-<app-home-page [hidden]="hideHome"></app-home-page>
+<app-home-page [hidden]="hideHome" [goal]="goal"></app-home-page>
 <app-goals-page [hidden]="hideGoals"></app-goals-page>
 <app-nutr-page [hidden]="hideNutr" (valueEmitter)="navigateTo($event)"></app-nutr-page>
 <app-prod-page [hidden]="hideProd" (valueEmitter)="navigateTo($event)"></app-prod-page>

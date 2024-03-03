@@ -7,8 +7,17 @@ import { Component, EventEmitter, Output } from '@angular/core';
 })
 export class FitnessPageComponent {
   @Output() valueEmitter = new EventEmitter<string>();
+  @Output() optionEmitter = new EventEmitter<string>();
+  selection: string = 'gain muscle';
+
+  setSelection(selection: string) {
+    console.log(selection);
+    this.selection = selection;
+  }
 
   emitNav() {
+    console.log(this.selection);
     this.valueEmitter.emit('general');
+    this.optionEmitter.emit(this.selection);
   }
 }

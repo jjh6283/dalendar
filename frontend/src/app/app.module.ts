@@ -12,6 +12,7 @@ import { WelcomePageModule } from './welcome-page/welcome-page.module';
 import { FitnessPageModule } from './fitness-page/fitness-page.module';
 import { GeneralPageModule } from './general-page/general-page.module';
 import { ProdPageModule } from './prod-page/prod-page.module';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -29,6 +30,7 @@ import { ProdPageModule } from './prod-page/prod-page.module';
     FitnessPageModule,
     GeneralPageModule,
     ProdPageModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
