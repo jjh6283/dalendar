@@ -15,5 +15,6 @@ import { FormComponent } from './form/form.component';
 })
 export class AppComponent {
   title = 'dalendar';
-  hideHome: boolean = false;
+  hideHome: boolean = true;
+  hideGoals: boolean = false;
 }

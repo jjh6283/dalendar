@@ -1,1 +1,63 @@
-<p>goals-page works!</p>
+<style>
+    .editButton{
+        position: absolute;
+        bottom: 25px;
+        right: 25px;
+    }
+</style>
+<div class="tabs is-centered is-boxed">
+    <ul>
+        <li [class]="currentTab=='general' ? 'is-active' : ''"
+            (click)="switchTab('general')"
+        >
+            <a>General</a>
+        </li>
+        <li [class]="currentTab=='fitness' ? 'is-active' : ''"
+            (click)="switchTab('fitness')"
+        >
+            <a>Fitness</a>
+        </li>
+        <li [class]="currentTab=='nutrition' ? 'is-active' : ''"
+            (click)="switchTab('nutrition')"
+        >
+            <a>Nutrition</a>
+        </li>
+        <li [class]="currentTab=='productivity' ? 'is-active' : ''"
+            (click)="switchTab('productivity')"
+        >
+            <a>Productivity</a>
+        </li>
+    </ul>
+</div>
+<div [hidden]="currentTab != 'general'">
+    <div class="container">
+        general
+    </div>
+    <button class="editButton button">
+        Edit
+    </button>
+</div>
+<div [hidden]="currentTab != 'fitness'">
+    <div class="container">
+        fitness
+    </div>
+    <button class="editButton button">
+        Edit
+    </button>
+</div>
+<div [hidden]="currentTab != 'nutrition'">
+    <div class="container">
+        nutr
+    </div>
+    <button class="editButton button">
+        Edit
+    </button>
+</div>
+<div [hidden]="currentTab != 'productivity'">
+    <div class="container">
+        prod
+    </div>
+    <button class="editButton button">
+        Edit
+    </button>
+</div>
