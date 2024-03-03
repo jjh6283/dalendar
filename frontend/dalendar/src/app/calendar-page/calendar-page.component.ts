@@ -8,5 +8,7 @@ import { Component } from '@angular/core';
   styleUrl: './calendar-page.component.css'
 })
 export class CalendarPageComponent {
-
+  months = [
+    
+  ]
 }
