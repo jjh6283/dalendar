@@ -10,6 +10,9 @@ import { FitnessPageComponent } from './fitness-page/fitness-page.component';
   ],
   imports: [
     CommonModule
+  ],
+  exports: [
+    FitnessPageComponent
   ]
 })
 export class FitnessPageModule { }

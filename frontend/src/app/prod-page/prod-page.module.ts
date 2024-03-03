@@ -10,6 +10,9 @@ import { ProdPageComponent } from './prod-page/prod-page.component';
   ],
   imports: [
     CommonModule
+  ],
+  exports: [
+    ProdPageComponent
   ]
 })
 export class ProdPageModule { }

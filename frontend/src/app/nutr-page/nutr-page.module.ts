@@ -10,6 +10,9 @@ import { NutrPageComponent } from './nutr-page/nutr-page.component';
   ],
   imports: [
     CommonModule
+  ],
+  exports: [
+    NutrPageComponent
   ]
 })
 export class NutrPageModule { }

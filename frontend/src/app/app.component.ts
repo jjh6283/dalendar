@@ -9,5 +9,9 @@ export class AppComponent {
   title = 'dalendar';
   hideHome: boolean = true;
   hideGoals: boolean = true;
-  hideWelcome: boolean = false;
+  hideWelcome: boolean = true;
+  hideGeneral: boolean = true;
+  hideFitness: boolean = true;
+  hideNutr: boolean = true;
+  hideProd: boolean = false;
 }

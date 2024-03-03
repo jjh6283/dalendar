@@ -1,1 +1,34 @@
-<p>fitness-page works!</p>
+<style>
+    .submitButton{
+        position: absolute;
+        bottom: 25px;
+        right: 25px;
+    }
+</style>
+<h1 class="title">Fitness Goals</h1>
+<div class="container">
+    <div class="box">
+        <p>
+            <b>What is your fitness goal?</b>
+        </p>
+        <div class="control">
+            <label class="radio">
+              <input type="radio" name="answer">
+              Gain Muscle
+            </label>
+            <label class="radio">
+              <input type="radio" name="answer">
+              Lose Weight
+            </label>
+            <label class="radio">
+                <input type="radio" name="answer">
+                Strength Train
+            </label>
+        </div>
+        <input class="input" type="text" placeholder="Other">
+    </div>
+
+</div>
+<button class="submitButton button is-primary">
+    Next
+</button>

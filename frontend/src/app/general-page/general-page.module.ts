@@ -10,6 +10,9 @@ import { GeneralPageComponent } from './general-page/general-page.component';
   ],
   imports: [
     CommonModule
+  ],
+  exports: [
+    GeneralPageComponent,
   ]
 })
 export class GeneralPageModule { }

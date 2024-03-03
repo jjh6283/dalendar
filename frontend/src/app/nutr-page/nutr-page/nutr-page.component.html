@@ -1,1 +1,39 @@
-<p>nutr-page works!</p>
+<style>
+    .submitButton{
+        position: absolute;
+        bottom: 25px;
+        right: 25px;
+    }
+</style>
+<h1 class="title">Nutrition Goals</h1>
+<div class="container">
+    <div class="box">
+        <p>
+            <b>What is your nutrition goal?</b>
+        </p>
+        <div class="control">
+            <label class="radio">
+              <input type="radio" name="answer">
+              Balanced
+            </label>
+            <label class="radio">
+              <input type="radio" name="answer">
+              Lose weight
+            </label>
+            <label class="radio">
+                <input type="radio" name="answer">
+                Gain Muscle
+            </label>
+        </div>
+        <input class="input" type="text" placeholder="Other">
+    </div>
+    <div class="box">
+        <p>
+            <b>Do you have any dietary restrictions?</b>
+        </p>
+        <textarea class="textarea" placeholder="Please explain"></textarea>
+    </div>
+</div>
+<button class="submitButton button is-primary">
+    Next
+</button>
