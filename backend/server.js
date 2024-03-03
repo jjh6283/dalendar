@@ -14,6 +14,10 @@ app.use((req, res, next) => {
 	next();
 })
 
+app.get('/', (req,res) => {
+	res.send("hello this works!");
+})
+
 app.get('/recommendation', async (req, res) => {
 	const response = await client.chat.completions.create({
 		model: 'gpt-4',
