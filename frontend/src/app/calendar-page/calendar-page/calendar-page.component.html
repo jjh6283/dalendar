@@ -1,1 +1,57 @@
-<p>calendar-page works!</p>
+<style>
+	.table {
+		table-layout: fixed;
+	}
+
+	.con {
+		margin: 10px;
+	}
+
+	.cell {
+		height: 4.5rem;
+	}
+</style>
+
+<div class="container">
+	<div class="box con">
+		<h1 class="title is-2">{{ selYear }} {{ months[selMonth].name }}</h1>
+		<div class="table-container">
+			<table class="table is-bordered is-hoverable is-fullwidth">
+				<thead>
+					<tr>
+						<th>
+							Sunday
+						</th>
+						<th>
+							Monday
+						</th>
+						<th>
+							Tuesday
+						</th>
+						<th>
+							Wednesday
+						</th>
+						<th>
+							Thursday
+						</th>
+						<th>
+							Friday
+						</th>
+						<th>
+							Saturday
+						</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr *ngFor="let day of [].constructor(getWeeksInMonth() + 1); let j = index">
+						<td *ngFor="let day of [].constructor(7); let i = index">
+							<div class="box cell">
+								<p>{{ ((determineDate(i, j) + 2 > 0) && (determineDate(i, j) + 2 < selDaysInMonth)) ? determineDate(i, j) + 2 : ''}}</p>
+							</div>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</div>
+</div>
